@@ -552,3 +552,7 @@ nav img {
     z-index: 2;
 }
 }
+.netflix>p:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
