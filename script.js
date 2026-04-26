@@ -1,11 +1,21 @@
-function submit() {
-    const submit=document.querySelector('.input');
-    const text=submit.value;
-    if(text===''){
-        alert('Please enter a Valid Email Address');
+document.querySelectorAll('.red-btn').forEach((btn,index)=>{
+    btn.addEventListener('click',()=>{
+    const inputs=document.querySelectorAll('.input');
+    const data=inputs[index];
+
+    let value=data.value;
+    let gmail='@'+value.split('@')[1];
+    if(value===''){
+        alert('Enter a valid Email address');
+        data.value='';
     }
-    else{   
+    else if(gmail==='@gmail.com'){
         alert('Thanks for login');
-        submit.value='';
+        data.value='';
     }
-}
+    else{
+        alert('Please Enter valid google email address');
+        data.value='';
+    }
+})
+})
